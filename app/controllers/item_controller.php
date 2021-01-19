@@ -6,12 +6,12 @@ class ItemController
     {
         $items = App::get('database')->items();
 
-        require 'app/views/allitems.php';
+        require 'app/views/item/allitems.php';
     }
 
     public function new_item()
     {
-        require 'app/views/additem.php';
+        require 'app/views/item/additem.php';
     }
 
     public function add_item()

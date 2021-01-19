@@ -3,6 +3,6 @@
         <span class="">Scandiweb Test Assignment</span>
     </div>
 </div>
-<!-- container end -->
+
 </div>
 </body>

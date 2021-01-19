@@ -15,7 +15,7 @@ require 'app/views/partials/head.php';
 </div>
 
 <?php
-require 'app/views/_item.php';
+require 'app/views/item/_item.php';
 
 require 'app/views/partials/footer.php';
 ?>
