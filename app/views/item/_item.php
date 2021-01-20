@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row row-cols-5 d-flex align-items-center justify-content-center">
     <?php foreach ($items as $item) { ?>
-        <div class="col-md m-3 p-4 border">
+        <div class="col m-3 p-4 border">
             <input type="checkbox" id="<?= $item->sku ?>" name="<?= $item->sku ?>" value="<?= $item->type ?>">
             <div class="text-center">
                 <div class=""><?= $item->sku ?></div>
