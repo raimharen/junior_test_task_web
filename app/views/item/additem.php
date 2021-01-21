@@ -16,40 +16,41 @@ require 'app/views/partials/head.php';
 
 <div class="row">
     <div class="col-3-md pt-3">
-        <form action="add_item" method="post" id="save">
+        <form action="add_item" enctype="multipart/form-data" method="post" id="save">
+            <p class="text-danger"><span id="err-sku"></span></p>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">SKU</span>
                 </div>
-                <input type="text" class="form-control" placeholder="" name="sku" required>
+                <input type="text" autofocus class="form-control" placeholder="" name="sku" required>
             </div>
-            <p><span class="err-sku"></span></p>
+            <p class="text-danger"><span id="err-name"></span></p>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
                 </div>
                 <input type="text" class="form-control" placeholder="" name="name" required>
             </div>
-            <p><span class="err-name"></span></p>
+            <p class="text-danger"><span id="err-price"></span></p>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Price ($)</span>
                 </div>
-                <input type="number" class="form-control" placeholder="" name="price" required>
+                <input type="text" class="form-control" placeholder="" name="price" required>
             </div>
-            <p><span class="err-price"></span></p>
-
+            <p class="text-danger"><span id="err-type"></span></p>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Type Switcher</span>
                 </div>
-                <select class="custom-select" name="type" id="type_choice" onclick="product_choice()">
-                    <option selected>Choose...</option>
+                <select class="custom-select" name="type" id="type_choice" onclick="product_choice()" required>
+                    <option disabled selected>-- select an option --</option>
                     <option value="dvd">DVD</option>
                     <option value="furniture">Furniture</option>
                     <option value="book">Book</option>
                 </select>
             </div>
+            <p class="text-danger"><span id="err-specific"></span></p>
             <!-- DVD SIZE -->
             <div class="input-group mb-3" id="dvd_block" style="display: none;">
                 <div class="input-group-prepend">
@@ -71,7 +72,6 @@ require 'app/views/partials/head.php';
                 </div>
                 <input id="book" type="text" class="form-control" placeholder="Provide weight in KG" name="specific" disabled="true" required>
             </div>
-            <p><span class="err-specific"></span></p>
         </form>
     </div>
 </div>
