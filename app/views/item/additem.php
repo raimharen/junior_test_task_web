@@ -16,7 +16,7 @@ require 'app/views/partials/head.php';
 
 <div class="row">
     <div class="col-3-md pt-3">
-        <form action="add_item" enctype="multipart/form-data" method="post" id="save">
+        <form action="add_item" method="post" id="save">
             <p class="text-danger"><span id="err-sku"></span></p>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
