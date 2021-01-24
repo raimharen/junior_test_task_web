@@ -10,6 +10,7 @@ class Request
             '/'
         );
     }
+
     //get method. GET, POST
     public static function method()
     {

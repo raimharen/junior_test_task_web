@@ -2,7 +2,7 @@
     <?php foreach ($items as $item) { ?>
         <div class="col p-3 ">
             <div class="border p-4">
-                <input type="checkbox" id="<?= $item->sku ?>" name="<?= $item->sku ?>" value="<?= $item->type ?>">
+                <input type="checkbox" name="<?= $item->sku ?>" value="<?= $item->id ?>">
                 <div class="text-center">
                     <div class=""><?= $item->sku ?></div>
                 </div>

@@ -36,7 +36,7 @@ require 'app/views/partials/head.php';
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Price ($)</span>
                 </div>
-                <input type="text" class="form-control" placeholder="" name="price" required>
+                <input type="text" class="form-control" placeholder="xx.xx" name="price" required>
             </div>
             <p class="text-danger"><span id="err-type"></span></p>
             <div class="input-group mb-3">

@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^assets/.+\.(jpg|gif|png|ico|css|js)$ - [L]
+RewriteRule ^.*$ index.php [END]

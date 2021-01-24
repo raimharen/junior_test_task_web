@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Place with query to db
+ */
 class QueryBuilder
 {
 
@@ -38,5 +40,14 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
+    }
+    public function delete_item($id)
+    {
+        /*try{
+            $stmt = $this->pdo->prepare("");
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }*/
+        
     }
 }

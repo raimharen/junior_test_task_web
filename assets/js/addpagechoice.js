@@ -1,12 +1,14 @@
+/**
+ * function for type swifter
+ */
 function product_choice() {
     //get user choice
     let userChoice = document.getElementById("type_choice").value;
-    //console.log(userChoice);
 
-    //accepted types
-    const types = ['dvd', 'furniture', 'book']
+    //whitelist
+    const types = ['dvd', 'furniture', 'book'];
 
-    //enable selected element
+    //enable/disable selected element
     if (types.includes(userChoice)) {
         types.forEach(disabled);
         document.getElementById(userChoice).disabled = false;
@@ -29,12 +31,14 @@ const form = document.querySelector("#save");
 form.addEventListener('submit', checkInputs);
 
 function checkInputs(event) {
-    const formData = new FormData(form);
     const whiteListType = ['dvd', 'furniture', 'book'];
+    const formData = new FormData(form);
+
+    form.querySelector("*[id^='err-']").innerText = '';
 
     for (let [key, value] of formData.entries()) {
         //console.log(`${key}: ${value}`);
-        if (key === 'sku') {
+        if (key === "sku") {
             if (!value.length) {
                 event.preventDefault();
                 showSkuErrorMessage();
@@ -56,7 +60,7 @@ function checkInputs(event) {
             }
         } else if (key === "specific") {
             if (!/^\d+x\d+x\d+$/.test(value)) {
-                if (!isNaN(value)) {
+                if (isNaN(value)) {
                     event.preventDefault();
                     showSpecificErrorMessage();
                 }

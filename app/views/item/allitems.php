@@ -10,10 +10,11 @@ require 'app/views/partials/head.php';
         <a href="new_item" class="btn btn-outline-dark" role="button">ADD</a>
     </div>
     <div class="col-3 d-flex align-items-center justify-content-center">
-        <a href="mass_delete" class="btn btn-outline-dark" role="button">MASS DELETE</a>
+        <a href="/" class="btn btn-outline-dark" role="button" type="submit" onclick="delete_product()">MASS DELETE</a>
     </div>
 </div>
 
+<script src="assets/js/massdeleteproduct.js"></script>
 <?php
 require 'app/views/item/_item.php';
 

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Database connection info
+ */
 class Connection
 {
 
