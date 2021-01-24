@@ -10,5 +10,5 @@ $router->get('index', 'ItemController@list');
 $router->get('new_item', 'ItemController@new_item');
 //add new item
 $router->post('add_item', 'ItemController@add_item');
-//delete item
+//delete item 
 $router->post('mass_delete', 'ItemController@delete_item');

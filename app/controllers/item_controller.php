@@ -37,7 +37,7 @@ class ItemController
     public function delete_item()
     {
         $item = new Item();
-        $deleteList = $item->deleteItem(App::get('database'), $_POST);
-        header('Location: /');
+        $deleteList = $item->deleteItem(App::get('database'), $_POST["product"]);
+        header('Location: /'); 
     }
 }

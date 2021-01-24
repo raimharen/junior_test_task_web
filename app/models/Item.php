@@ -26,10 +26,9 @@ class Item
         $db->insert_item($params['sku'], $params['name'], $params['price'], $params['type'], $params['specific']);
     }
 
-    public static function deleteItem($db, $params){
-        var_dump($params['id']);
-        $db->delete_item($params['id']);
-
+    public static function deleteItem($db, array $params){
+        //подключение к дб -> delete_item - запрос в бд
+        $db->delete_item($params);
     }
 }
 

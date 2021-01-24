@@ -7,7 +7,7 @@ require 'app/views/partials/head.php';
         <h1>Product Add</h2>
     </div>
     <div class="col-1 d-flex align-items-center justify-content-center">
-        <button href="new_item" class="btn btn-outline-dark" role="button" type="submit" form="save">Save</button>
+        <button class="btn btn-outline-dark" role="button" type="submit" form="save">Save</button>
     </div>
     <div class="col-3 d-flex align-items-center justify-content-center">
         <a href="/" class="btn btn-outline-dark" role="button">Cancel</a>

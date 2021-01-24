@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Place with query to db
  */
@@ -26,7 +27,7 @@ class QueryBuilder
     public function insert_item($sku, $name, $price, $type, $specific)
     {
         //$whiteList = ['dvd', 'book', 'furniture'];
-        
+
         $table = "type_" . $type;
         try {
             $stmt = $this->pdo->prepare("INSERT INTO items(sku, name, price, type) VALUES(?, ?, ?, ?)");
@@ -41,13 +42,16 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-    public function delete_item($id)
+    public function delete_item(array $id)
     {
-        /*try{
-            $stmt = $this->pdo->prepare("");
+        try {
+            $questionmark = trim(str_repeat('?,', count($id)), ',');
+            $stmt = $this->pdo->prepare("DELETE FROM items WHERE id IN ($questionmark)");
+           
+            $stmt->execute($id);
+            //return $stmt->debugDumpParams();
         } catch (Exception $e) {
             die($e->getMessage());
-        }*/
-        
+        }
     }
 }
