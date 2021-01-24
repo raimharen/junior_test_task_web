@@ -17,28 +17,30 @@ require 'app/views/partials/head.php';
 <div class="row">
     <div class="col-3-md pt-3">
         <form action="add_item" method="post" id="save">
-            <p class="text-danger"><span id="err-sku"></span></p>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">SKU</span>
                 </div>
                 <input type="text" autofocus class="form-control" placeholder="" name="sku" required>
             </div>
-            <p class="text-danger"><span id="err-name"></span></p>
+            <p class="text-danger"><span id="err-sku"></span></p>
+
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
                 </div>
                 <input type="text" class="form-control" placeholder="" name="name" required>
             </div>
-            <p class="text-danger"><span id="err-price"></span></p>
+            <p class="text-danger"><span id="err-name"></span></p>
+
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Price ($)</span>
                 </div>
-                <input type="text" class="form-control" placeholder="xx.xx" name="price" required>
+                <input  data-mask="00.00" type="text" class="form-control" placeholder="XX.XX" name="price" required>
             </div>
-            <p class="text-danger"><span id="err-type"></span></p>
+            <p class="text-danger"><span id="err-price"></span></p>
+            
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Type Switcher</span>
@@ -50,6 +52,7 @@ require 'app/views/partials/head.php';
                     <option value="book">Book</option>
                 </select>
             </div>
+            <p class="text-danger"><span id="err-type"></span></p>
             <p class="text-danger"><span id="err-specific"></span></p>
             <!-- DVD SIZE -->
             <div class="input-group mb-3" id="dvd_block" style="display: none;">
