@@ -44,14 +44,18 @@ class QueryBuilder
     }
     public function delete_item(array $id)
     {
-        try {
-            $questionmark = trim(str_repeat('?,', count($id)), ',');
-            $stmt = $this->pdo->prepare("DELETE FROM items WHERE id IN ($questionmark)");
-           
-            $stmt->execute($id);
-            //return $stmt->debugDumpParams();
-        } catch (Exception $e) {
-            die($e->getMessage());
+        if (!empty($id)) {
+            try {
+                $questionmark = trim(str_repeat('?,', count($id)), ',');
+                $stmt = $this->pdo->prepare("DELETE FROM items WHERE id IN ($questionmark)");
+
+                $stmt->execute($id);
+                //return $stmt->debugDumpParams();
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        }else{
+            return;
         }
     }
 }
